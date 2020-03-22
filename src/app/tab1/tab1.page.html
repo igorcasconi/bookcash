@@ -1,0 +1,57 @@
+<ion-content>
+  <div *ngIf="MovCaixas.length > 0; else notShowList">
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h3>Entradas</h3>
+          </ion-col>
+          <ion-col>
+            <ion-chip id="aviso-saldo">
+              <ion-label color="light">Saldo: R$ {{ saldo }} </ion-label>
+            </ion-chip>
+          </ion-col>
+        </ion-row>
+      </ion-grid>    
+    </div>
+    <ion-list>
+      <ion-item-sliding id="lista-caixa" *ngFor="let MovCx of MovCaixas" >
+        <ion-item>
+          <img src="assets/recibo.svg" id="image-cash2" >
+          <ion-grid>
+            <ion-row>
+              <h3 id="produto" >{{ MovCx.Movimentacao_Caixa_product}}</h3>
+            </ion-row>
+            <ion-row>
+              <p class="formato-data" >{{ MovCx.Movimentacao_Caixa_date | date: 'dd/MM/yyyy'}}</p>
+            </ion-row>
+            <ion-row>
+              <p class="formato-data">{{ MovCx.Movimentacao_Caixa_date | date: 'HH:mm'}}</p>
+            </ion-row>
+          </ion-grid>
+            <p slot="end">R${{ MovCx.Movimentacao_Caixa_value }}</p>
+          
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="alertRemoveCaixa(MovCx)"><ion-icon id="botaoExcluir" name="trash"></ion-icon></ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>     
+    </ion-list>
+  </div>
+
+ 
+
+  <ng-template #notShowList >
+    <div class="ion-padding" id="not-caixas">
+      <img src="assets/recibo.svg" id="image-not-Caixa">
+      <h2>Entradas do Caixa!</h2>
+    </div>
+  </ng-template> 
+  
+
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed" >
+    <ion-fab-button color="success" (click)="addMovCaixaEntrada(id,1)">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

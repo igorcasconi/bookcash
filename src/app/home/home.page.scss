@@ -1,1 +1,36 @@
+ion-header {
+    background-color: #5f8ed0;
+}
 
+#lista-caixa {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Quicksand', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#lista-icons {
+    ion-icon {
+        font-size: 30px;
+    }
+}
+
+#image-cash {
+    width: 35%;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+#image-not-Caixa {
+    width: 45%;
+    
+}
+
+#not-caixas {
+    margin: auto;
+    text-align: center;
+}
+
+#botaoAbout {
+    margin-right: 10px;
+    font-size: 30px;
+}

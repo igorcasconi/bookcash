@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="topo_app">
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="voltarPagina()" id="voltarButton"></ion-icon>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="mov == 1; else saidaMov">
+    <img id="entrada-img" src="assets/recibo.svg">
+    <p>{{ mensagem }}</p>
+  </div>
+
+  <ng-template #saidaMov >
+    <img id="entrada-img" src="assets/recibo_saida.svg">
+    <p>{{ mensagem }}</p>
+  </ng-template >
+  
+  <ion-item id="input">
+    <ion-label>Nome do Produto:</ion-label>
+    <ion-input [(ngModel)]="caixa.Movimentacao_Caixa_product" type="text"  name="product"></ion-input>
+  </ion-item>
+  <ion-item >
+    <ion-label>Valor do Produto:</ion-label>
+    <ion-input type="number" [(ngModel)]="caixa.Movimentacao_Caixa_value" name="valueProduct"></ion-input>
+  </ion-item>
+  <ion-item class="date-picker">
+      <ion-label>Selecione a data:</ion-label>
+      <ion-datetime [(ngModel)]="caixa.Movimentacao_Caixa_date" displayFormat="DD/MM/YYYY" placeholder="dd/mm/aaaa"></ion-datetime>
+  </ion-item>
+
+  <ion-button id="botaoAdicionar" color="success" expand="full" (click)="save(mov)">Salvar</ion-button>
+</ion-content>

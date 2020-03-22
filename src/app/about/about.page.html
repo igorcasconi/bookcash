@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="topo_app">
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="voltarPagina()" id="voltarButton"></ion-icon>
+    </ion-buttons>
+    <ion-title> Sobre o BookCash</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <div id="titulo">
+        <h1>BookCash</h1>
+      </div>
+    </ion-row>
+    <ion-row>
+      <div id="titulo">
+        <img src="assets/logo-bookcash.png"/>
+      </div>
+    </ion-row>
+    <ion-row>
+      <h3>Versão</h3>
+    </ion-row>
+    <ion-row id="versao">
+      <ion-col size="1"><ion-icon name="checkmark-circle"></ion-icon></ion-col>
+      <ion-col size="2"><p>v1.0</p></ion-col>
+    </ion-row>
+    <ion-row>
+      <h4>Crédito aos autores dos icones do App</h4>
+      <div>Ícones feitos por 
+        <a href="https://www.flaticon.com/br/autores/icongeek26" title="Icongeek26">Icongeek26</a> from 
+        <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a>
+      </div>
+      <div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/smashicons" title="Smashicons">Smashicons</a> 
+      from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
+      <div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/freepik" title="Freepik">Freepik</a> 
+        from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
+    </ion-row>
+    <ion-row >
+      <ion-col size="1"><h3>By</h3></ion-col>
+      <ion-col size="5" id="autor"><p>Igor Casconi</p></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,27 @@
+ion-header {
+    background-color: #5f8ed0;
+}
+
+#voltarButton {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+#titulo {
+    margin: auto;
+    text-align: center;
+}
+
+#versao {
+    font-size: 22px;
+    p {
+        margin-top: -2px;
+    }
+    ion-icon {
+        color: green;
+    }
+}
+
+#autor {
+    margin-top: 7px;
+}
