@@ -1,6 +1,6 @@
-<h1>BookCash</h1>
+<h1>BookCash v1.0</h1>
 
-<h3>Aplicativo para substituir os Livros Caixas utilizado por pequenos comerciantes para inserir entrada e saída de caixa.</h3>
+<h3>Aplicativo para substituir os Livros Caixas utilizado por pequenos comerciantes para inserir entrada e saída de caixa obter saldo automaticamente.</h3>
 
 <h2>Tecnologias utilizadas para criação do App</h2>
 <ul>
